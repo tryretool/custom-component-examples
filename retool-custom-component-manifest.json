@@ -1,0 +1,219 @@
+{
+  "customComponentSupportVersion": "1",
+  "components": {
+    "AgGrid": {
+      "name": "Ag Grid",
+      "model": [
+        {
+          "name": "rowData",
+          "label": "Row Data",
+          "type": "data",
+          "hidden": false,
+          "defaultValue": [
+            {
+              "make": "Toyota",
+              "model": "Celica",
+              "price": 35000
+            },
+            {
+              "make": "Ford",
+              "model": "Mondeo",
+              "price": 32000
+            },
+            {
+              "make": "Porsche",
+              "model": "Boxster",
+              "price": 72000
+            }
+          ],
+          "description": null
+        },
+        {
+          "name": "columnDefs",
+          "label": "Column Defs",
+          "type": "data",
+          "hidden": false,
+          "defaultValue": [
+            {
+              "headerName": "Make",
+              "field": "make"
+            },
+            {
+              "headerName": "Model",
+              "field": "model"
+            },
+            {
+              "headerName": "Price",
+              "field": "price"
+            }
+          ],
+          "description": null
+        },
+        {
+          "name": "selectedData",
+          "label": "Selected Data",
+          "type": "string",
+          "hidden": false,
+          "defaultValue": null,
+          "description": null
+        }
+      ],
+      "events": ["cellClicked"],
+      "defaultHeight": 40,
+      "defaultWidth": 4
+    },
+    "MaterialInput": {
+      "name": "Material Input",
+      "model": [
+        {
+          "name": "value",
+          "label": "Value",
+          "type": "string",
+          "hidden": false,
+          "defaultValue": null,
+          "description": null
+        },
+        {
+          "name": "placeholder",
+          "label": "Placeholder",
+          "type": "string",
+          "hidden": false,
+          "defaultValue": null,
+          "description": null
+        }
+      ],
+      "events": [],
+      "defaultHeight": 5,
+      "defaultWidth": 2
+    },
+    "MaterialNestedList": {
+      "name": "Material Nested List",
+      "model": [
+        {
+          "name": "data",
+          "label": "Data",
+          "type": "data",
+          "hidden": false,
+          "defaultValue": [
+            {
+              "key": "EMP001",
+              "value": "Alice Johnson",
+              "children": [
+                {
+                  "key": "EMP002",
+                  "value": "Bob Smith",
+                  "children": [
+                    {
+                      "key": "EMP003",
+                      "value": "Charlie Williams",
+                      "children": [
+                        {
+                          "key": "EMP004",
+                          "value": "David Brown"
+                        },
+                        {
+                          "key": "EMP005",
+                          "value": "Emily Miller"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "key": "EMP006",
+                  "value": "Frank Wilson"
+                },
+                {
+                  "key": "EMP007",
+                  "value": "Grace Lee",
+                  "children": [
+                    {
+                      "key": "EMP008",
+                      "value": "Helen Harris"
+                    },
+                    {
+                      "key": "EMP009",
+                      "value": "Ivy Clark"
+                    }
+                  ]
+                },
+                {
+                  "key": "EMP010",
+                  "value": "Jack Adams"
+                },
+                {
+                  "key": "EMP011",
+                  "value": "Kevin Scott"
+                },
+                {
+                  "key": "EMP012",
+                  "value": "Laura White"
+                }
+              ]
+            }
+          ],
+          "description": null
+        },
+        {
+          "name": "selectedItem",
+          "label": "Selected Item",
+          "type": "data",
+          "hidden": false,
+          "defaultValue": null,
+          "description": null
+        }
+      ],
+      "events": ["selectedItemChanged"],
+      "defaultHeight": 60,
+      "defaultWidth": 2
+    },
+    "ReactPdfHighlighter": {
+      "name": "React Pdf Highlighter",
+      "model": [
+        {
+          "name": "pdfUrl",
+          "label": "Pdf Url",
+          "type": "string",
+          "hidden": false,
+          "defaultValue": "https://arxiv.org/pdf/1708.08021.pdf",
+          "description": null
+        },
+        {
+          "name": "highlights",
+          "label": "Highlights",
+          "type": "data",
+          "hidden": false,
+          "defaultValue": [],
+          "description": null
+        }
+      ],
+      "events": ["highlightsChanged"],
+      "defaultHeight": 100,
+      "defaultWidth": 8
+    },
+    "RoundedBox": {
+      "name": "Rounded Box",
+      "model": [
+        {
+          "name": "headerText",
+          "label": "Header Text",
+          "type": "string",
+          "hidden": false,
+          "defaultValue": "Header",
+          "description": null
+        },
+        {
+          "name": "bodyText",
+          "label": "Body Text",
+          "type": "string",
+          "hidden": false,
+          "defaultValue": "Body",
+          "description": null
+        }
+      ],
+      "events": [],
+      "defaultHeight": 30,
+      "defaultWidth": 2
+    }
+  }
+}
