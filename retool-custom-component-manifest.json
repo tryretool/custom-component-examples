@@ -58,7 +58,9 @@
           "description": null
         }
       ],
-      "events": ["cellClicked"],
+      "events": [
+        "cellClicked"
+      ],
       "defaultHeight": 40,
       "defaultWidth": 4
     },
@@ -163,7 +165,9 @@
           "description": null
         }
       ],
-      "events": ["selectedItemChanged"],
+      "events": [
+        "selectedItemChanged"
+      ],
       "defaultHeight": 60,
       "defaultWidth": 2
     },
@@ -187,7 +191,9 @@
           "description": null
         }
       ],
-      "events": ["highlightsChanged"],
+      "events": [
+        "highlightsChanged"
+      ],
       "defaultHeight": 100,
       "defaultWidth": 8
     },
@@ -213,6 +219,46 @@
       ],
       "events": [],
       "defaultHeight": 30,
+      "defaultWidth": 2
+    },
+    "ChatClient": {
+      "name": "Chat Client",
+      "model": [
+        {
+          "name": "apiKey",
+          "label": "Api Key",
+          "type": "string",
+          "hidden": false,
+          "defaultValue": "dz5f4d5kzrue",
+          "description": null
+        },
+        {
+          "name": "userName",
+          "label": "User Name",
+          "type": "string",
+          "hidden": false,
+          "defaultValue": "shiny",
+          "description": null
+        },
+        {
+          "name": "userId",
+          "label": "User Id",
+          "type": "string",
+          "hidden": false,
+          "defaultValue": "shiny-king-6",
+          "description": null
+        },
+        {
+          "name": "userToken",
+          "label": "User Token",
+          "type": "string",
+          "hidden": false,
+          "defaultValue": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoic2hpbnkta2luZy02IiwiZXhwIjoxNzAxNzQ1Mzg0fQ.RBcITB1Z2_Iu5H3DTLHfmF4CATs1Eai23thCq4AK9sw",
+          "description": null
+        }
+      ],
+      "events": [],
+      "defaultHeight": 5,
       "defaultWidth": 2
     }
   }
