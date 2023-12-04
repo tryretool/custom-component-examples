@@ -58,7 +58,9 @@
           "description": null
         }
       ],
-      "events": ["cellClicked"],
+      "events": [
+        "cellClicked"
+      ],
       "defaultHeight": 40,
       "defaultWidth": 4
     },
@@ -163,7 +165,9 @@
           "description": null
         }
       ],
-      "events": ["selectedItemChanged"],
+      "events": [
+        "selectedItemChanged"
+      ],
       "defaultHeight": 60,
       "defaultWidth": 2
     },
@@ -182,12 +186,14 @@
           "name": "highlights",
           "label": "Highlights",
           "type": "data",
-          "hidden": false,
+          "hidden": true,
           "defaultValue": [],
           "description": null
         }
       ],
-      "events": ["highlightsChanged"],
+      "events": [
+        "highlightsChanged"
+      ],
       "defaultHeight": 100,
       "defaultWidth": 8
     },
@@ -208,6 +214,22 @@
           "type": "string",
           "hidden": false,
           "defaultValue": "Body",
+          "description": null
+        }
+      ],
+      "events": [],
+      "defaultHeight": 30,
+      "defaultWidth": 2
+    },
+    "Tableau": {
+      "name": "Tableau",
+      "model": [
+        {
+          "name": "vizUrl",
+          "label": "Viz URL",
+          "type": "string",
+          "hidden": false,
+          "defaultValue": "https://public.tableau.com/views/RadialMarimekko/RM",
           "description": null
         }
       ],

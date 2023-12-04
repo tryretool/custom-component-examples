@@ -2680,6 +2680,11 @@
   resolved "https://registry.yarnpkg.com/@types/stack-utils/-/stack-utils-2.0.3.tgz#6209321eb2c1712a7e7466422b8cb1fc0d9dd5d8"
   integrity sha512-9aEbYZ3TbYMznPdcdr3SmIrLXwC/AKZXQeCf9Pgao5CKb8CyHuEX5jzWPTkvregvhRJHcpRO6BFoGW9ycaOkYw==
 
+"@types/tableau-js-api@^2.8.5":
+  version "2.8.5"
+  resolved "https://registry.yarnpkg.com/@types/tableau-js-api/-/tableau-js-api-2.8.5.tgz#f89c17bdf9759f0abfc2b090456a1b26254b4a29"
+  integrity sha512-dIlNkiFANpRMXiuyQsDE/k2pegTaA+guy7MUo0gMO6yVWjA5VTatXiX8be74HZ72VICQrfZal3QamWc52QCr3A==
+
 "@types/testing-library__jest-dom@^5.9.1":
   version "5.14.9"
   resolved "https://registry.yarnpkg.com/@types/testing-library__jest-dom/-/testing-library__jest-dom-5.14.9.tgz#0fb1e6a0278d87b6737db55af5967570b67cb466"
@@ -10057,6 +10062,11 @@ symbol-tree@^3.2.4:
   version "3.2.4"
   resolved "https://registry.yarnpkg.com/symbol-tree/-/symbol-tree-3.2.4.tgz#430637d248ba77e078883951fb9aa0eed7c63fa2"
   integrity sha512-9QNk5KwDF+Bvz+PyObkmSYjI5ksVUYtjW7AU22r2NKcfLJcXp96hkDWU3+XndOsUb+AQ9QhfzfCT2O+CNWT5Tw==
+
+tableau-api-js@^2.8.1:
+  version "2.8.1"
+  resolved "https://registry.yarnpkg.com/tableau-api-js/-/tableau-api-js-2.8.1.tgz#d181bb220bf6335c72245010c9e4ab5805c4c14d"
+  integrity sha512-7NTX8VfR4MiTdacn6I0oeWn54tOLDBZhZAJymCxIrWbbhcFPfN3lB+A4+3tn14z0rYGg594hqUTSvIuIA5TdCg==
 
 tailwindcss@^3.0.2:
   version "3.3.5"
