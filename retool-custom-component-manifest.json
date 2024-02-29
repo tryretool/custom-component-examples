@@ -159,7 +159,7 @@
         {
           "name": "selectedItem",
           "label": "Selected Item",
-          "type": "data",
+          "type": "array",
           "hidden": false,
           "defaultValue": null,
           "description": null
