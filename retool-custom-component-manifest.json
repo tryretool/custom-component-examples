@@ -7,7 +7,7 @@
         {
           "name": "rowData",
           "label": "Row Data",
-          "type": "data",
+          "type": "array",
           "hidden": false,
           "defaultValue": [
             {
@@ -31,7 +31,7 @@
         {
           "name": "columnDefs",
           "label": "Column Defs",
-          "type": "data",
+          "type": "array",
           "hidden": false,
           "defaultValue": [
             {
@@ -94,7 +94,7 @@
         {
           "name": "data",
           "label": "Data",
-          "type": "data",
+          "type": "array",
           "hidden": false,
           "defaultValue": [
             {
@@ -159,7 +159,7 @@
         {
           "name": "selectedItem",
           "label": "Selected Item",
-          "type": "data",
+          "type": "array",
           "hidden": false,
           "defaultValue": null,
           "description": null
@@ -185,7 +185,7 @@
         {
           "name": "highlights",
           "label": "Highlights",
-          "type": "data",
+          "type": "array",
           "hidden": false,
           "defaultValue": [],
           "description": null
