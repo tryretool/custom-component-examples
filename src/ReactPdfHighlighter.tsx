@@ -47,7 +47,7 @@ export const ReactPdfHighlighter: FC = () => {
             content: { ...(originalContent as Retool.SerializableObject), ...content },
             ...rest,
           }
-        : (h as Retool.SerializableObject)
+        : h
     })
     setHighlights(newHighlights as Retool.SerializableArray)
 
