@@ -1,8 +1,8 @@
-import { useRetoolEventCallback, useRetoolState } from '@tryretool/custom-component-collections'
 import { useCallback, type FC, useRef, useEffect } from 'react'
 import { IHighlight, NewHighlight, PdfHighlighter, PdfLoader } from 'react-pdf-highlighter'
 import { v4 as uuidV4 } from 'uuid'
 import { Tip, Highlight, Popup, AreaHighlight } from 'react-pdf-highlighter'
+import { Retool } from '@tryretool/custom-component-support'
 
 const HighlightPopup = ({ comment }: { comment: { text: string; emoji: string } }) =>
   comment.text ? (
@@ -12,12 +12,12 @@ const HighlightPopup = ({ comment }: { comment: { text: string; emoji: string } 
   ) : null
 
 export const ReactPdfHighlighter: FC = () => {
-  const [pdfUrl] = useRetoolState('pdfUrl', '')
-  const [highlights, setHighlights] = useRetoolState<IHighlight[]>('highlights', [])
+  const [pdfUrl] = Retool.useStateString({ name: 'pdfUrl' })
+  const [highlights, setHighlights] = Retool.useStateArray({ name: 'highlights' })
 
-  const onHighlightsChanged = useRetoolEventCallback('highlightsChanged')
+  const onHighlightsChanged = Retool.useEventCallback({ name: 'highlightsChanged' })
 
-  const highlightsRef = useRef<IHighlight[]>(highlights)
+  const highlightsRef = useRef(highlights)
 
   // Update highlightsRef when highlights change
   // This is needed because the callback passed to PdfHighlighter
@@ -29,7 +29,7 @@ export const ReactPdfHighlighter: FC = () => {
   const addHighlight = useCallback(
     (highlight: NewHighlight) => {
       const newHighlights = [...highlightsRef.current, { ...highlight, id: uuidV4() }]
-      setHighlights(newHighlights)
+      setHighlights(newHighlights as Retool.SerializableArray)
       onHighlightsChanged()
     },
     [onHighlightsChanged, setHighlights],
@@ -37,20 +37,19 @@ export const ReactPdfHighlighter: FC = () => {
 
   const updateHighlight = (highlightId: string, position: Object, content: Object) => {
     console.log('Updating highlight', highlightId, position, content)
-
-    setHighlights(
-      highlights.map((h) => {
-        const { id, position: originalPosition, content: originalContent, ...rest } = h
-        return id === highlightId
-          ? {
-              id,
-              position: { ...originalPosition, ...position },
-              content: { ...originalContent, ...content },
-              ...rest,
-            }
-          : h
-      }),
-    )
+    const newHighlights = highlights.map((h) => {
+      h = h as Retool.SerializableObject
+      const { id, position: originalPosition, content: originalContent, ...rest } = h
+      return id === highlightId
+        ? {
+            id,
+            position: { ...(originalPosition as Retool.SerializableObject), ...position },
+            content: { ...(originalContent as Retool.SerializableObject), ...content },
+            ...rest,
+          }
+        : (h as Retool.SerializableObject)
+    })
+    setHighlights(newHighlights as Retool.SerializableArray)
 
     onHighlightsChanged()
   }
@@ -106,7 +105,7 @@ export const ReactPdfHighlighter: FC = () => {
                 />
               )
             }}
-            highlights={highlights}
+            highlights={highlights as unknown as IHighlight[]}
           />
         )}
       </PdfLoader>
