@@ -8,9 +8,51 @@ import 'ag-grid-community/styles/ag-grid.css'
 import 'ag-grid-community/styles/ag-theme-alpine.css'
 
 export const AgGrid: FC = () => {
-  const [rowData] = Retool.useStateArray({ name: 'rowData', initialValue: [] })
-  const [columnDefs] = Retool.useStateArray({ name: 'columnDefs', initialValue: [] })
-  const [_, setSelectedData] = Retool.useStateString({ name: 'selectedData', initialValue: '' })
+  const [rowData] = Retool.useStateArray({
+    name: 'rowData',
+    initialValue: [
+      {
+        make: 'Toyota',
+        model: 'Celica',
+        price: 35000,
+      },
+      {
+        make: 'Ford',
+        model: 'Mondeo',
+        price: 32000,
+      },
+      {
+        make: 'Porsche',
+        model: 'Boxster',
+        price: 72000,
+      },
+    ],
+  })
+
+  const [columnDefs] = Retool.useStateArray({
+    name: 'columnDefs',
+    initialValue: [
+      {
+        headerName: 'Make',
+        field: 'make',
+      },
+      {
+        headerName: 'Model',
+        field: 'model',
+      },
+      {
+        headerName: 'Price',
+        field: 'price',
+      },
+    ],
+  })
+
+  Retool.useComponentSettings({
+    defaultHeight: 30,
+    defaultWidth: 5,
+  })
+
+  const [_, setSelectedData] = Retool.useStateString({ name: 'selectedData', inspector: 'hidden' })
 
   const innerOnCellClicked = Retool.useEventCallback({ name: 'cellClicked' })
 
