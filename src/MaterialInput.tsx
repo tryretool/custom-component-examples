@@ -1,10 +1,10 @@
 import Input from '@mui/material/Input'
+import { Retool } from '@tryretool/custom-component-support'
 import { type FC } from 'react'
-import { useRetoolState } from '@tryretool/custom-component-collections'
 
 export const MaterialInput: FC = () => {
-  const [value, setValue] = useRetoolState('value', '')
-  const [placeholder] = useRetoolState('placeholder', '')
+  const [value, setValue] = Retool.useStateString({ name: 'value' })
+  const [placeholder] = Retool.useStateString({ name: 'placeholder' })
 
   return (
     <Input

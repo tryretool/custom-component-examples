@@ -1,4 +1,3 @@
-import { useRetoolState } from '@tryretool/custom-component-collections'
 import { useEffect, useState } from 'react'
 import { StreamChat, User, Channel } from 'stream-chat'
 import {
@@ -13,12 +12,13 @@ import {
 import { type FC } from 'react'
 
 import 'stream-chat-react/dist/css/v2/index.css'
+import { Retool } from '@tryretool/custom-component-support'
 
 export const ChatClient: FC = () => {
-  const [apiKey, _setApiKey] = useRetoolState('apiKey', '')
-  const [userName, _setUserName] = useRetoolState('userName', '')
-  const [userId, _setUserId] = useRetoolState('userId', '')
-  const [userToken, _setUserToken] = useRetoolState('userToken', '')
+  const [apiKey, _setApiKey] = Retool.useStateString({ name: 'apiKey' })
+  const [userName, _setUserName] = Retool.useStateString({ name: 'userName' })
+  const [userId, _setUserId] = Retool.useStateString({ name: 'userId' })
+  const [userToken, _setUserToken] = Retool.useStateString({ name: 'userToken' })
 
   const [chatClient, setChatClient] = useState<StreamChat | undefined>(undefined)
   const [channel, setChannel] = useState<Channel | undefined>(undefined)
