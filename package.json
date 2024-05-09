@@ -9,7 +9,7 @@
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@mui/material": "^5.14.8",
-    "@tryretool/custom-component-support": "file:../retool_development/bazel-bin/custom_component_support/support_npm_package/",
+    "@tryretool/custom-component-support": "latest",
     "ag-grid-community": "^30.1.0",
     "ag-grid-react": "^30.1.0",
     "fp-ts": "^2.16.5",
